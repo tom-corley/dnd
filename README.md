@@ -37,5 +37,9 @@ There are five test files (Achieving well above 90% coverage)
 5. InputAndProgramTests.cs
     - Unit tests checking that user input is processed correctly and that the whole application runs to completion when given suitable input.
 
+### Assumptions/Changes From Brief
+
+- I have asked users for a team name before creating characters as it flowed better than the opposite in my opinion.
+
 
 
