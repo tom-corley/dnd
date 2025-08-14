@@ -1,13 +1,16 @@
 public abstract class Character
 {
-    private int Health { get; set; }
-    private int Attack { get; set; }
-    private string Name { get; set; }
+    public int Health { get; protected set; }
+    public int MaxHealth { get; }
+    public int Attack { get; protected set; }
+    public string Name { get; protected set; }
+    public bool Alive => Health > 0;
 
     public Character(string name, int health, int attack)
     {
         Name = name;
         Health = health;
+        MaxHealth = Health;
         Attack = attack;
     }
 
@@ -17,7 +20,7 @@ public abstract class Character
         return Health;
     }
 
-    public int Attack(Character target)
+    public virtual int AttackCharacter(Character target)
     {
         target.takeDamage(Attack);
         return target.Health;
