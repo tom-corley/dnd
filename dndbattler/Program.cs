@@ -3,7 +3,7 @@
     public static void Main(string[] args)
     {
         // Initialise random number generation and factory 
-        Random rng = new Random(5);
+        Random rng = new Random();
         CharacterFactory factory = new CharacterFactory(rng);
 
         // Create Teams
@@ -13,10 +13,8 @@
         Team team2 = GetTeamFromUser(factory);
         System.Console.WriteLine("\n");
 
-        // Launch Game
-        BattleEngine game = new BattleEngine(team1, team2);
-
-        // Run game
+        // Launch and Run Game
+        BattleEngine game = new BattleEngine(team1, team2, rng);
         game.Run();
     }
 

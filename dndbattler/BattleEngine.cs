@@ -4,17 +4,12 @@ public class BattleEngine
     public Team Team2;
     public int TeamSize;
     public static GameLogger logger = GameLogger.Instance;
-    private Random rng;
-    public BattleEngine(Team team1, Team team2, int seed = 0)
+    private Random _rng;
+    public BattleEngine(Team team1, Team team2, Random rng)
     {
         Team1 = team1;
-        Team2 = team2;
-        rng = new Random(seed);
-
-        if (team1.Members.Count != team2.Members.Count)
-        {
-            throw new Exception("Teams must be of equal size");
-        }
+        Team2 = team2; // These are checked to be the same size earlier (both to the set team size)
+        _rng = rng;
         TeamSize = team1.Members.Count;
     }
 
@@ -40,18 +35,22 @@ public class BattleEngine
             playingTeam = turn < TeamSize ? Team1 : Team2;
             opposingTeam = turn >= TeamSize ? Team1 : Team2;
 
-            // Player attacks
+            // Check attacking player is alive, otherwise skip
             attackingPlayer = playingTeam.Members[turn % TeamSize];
             if (!attackingPlayer.Alive)
             {
                 turn = (turn + 1) % (2 * TeamSize);
                 continue;
             }
+
+            // Find a random target who is alive
             do
             {
-                targetedPlayer = opposingTeam.Members[rng.Next() % TeamSize];
+                targetedPlayer = opposingTeam.Members[_rng.Next() % TeamSize];
             }
             while (!targetedPlayer.Alive);
+
+            // Announce round, carry out attack and log events
             logger.Log($"===ROUND {roundNumber}===");
             string attack_log;
             int res = attackingPlayer.AttackCharacter(targetedPlayer, out attack_log);
@@ -63,7 +62,7 @@ public class BattleEngine
 
             // Iterate turn and round number
             turn = (turn + 1) % (2 * TeamSize);
-            roundNumber++;
+            roundNumber++; // not iterated unless attack happens
         }
 
         // Results log
