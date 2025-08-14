@@ -1,0 +1,1 @@
+public enum CharacterType { Fighter, Wizard, Cleric }

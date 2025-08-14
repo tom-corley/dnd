@@ -5,7 +5,7 @@ public class Wizard : Character
     public override int AttackCharacter(Character target)
     {
         target.TakeDamage(Attack);
-        TakeDamage(1);
+        TakeDamage(GameConstants.WIZARD_SELF_DAMAGE);
         return target.Health;
     }
 }

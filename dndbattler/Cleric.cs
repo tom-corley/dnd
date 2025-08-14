@@ -5,7 +5,7 @@ public class Cleric : Character
     public override int AttackCharacter(Character target)
     {
         target.TakeDamage(Attack);
-        Heal(1);
+        Heal(GameConstants.CLERIC_SELF_HEAL);
         return target.Health;
     }
 }

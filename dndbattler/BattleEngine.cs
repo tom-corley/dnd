@@ -32,7 +32,7 @@ public class BattleEngine
         Character targetedPlayer;
 
         // Main game loop
-        while (Team1.IsAlive() && Team2.IsAlive())
+        while (Team1.IsAlive && Team2.IsAlive)
         {
             // For example for 6 players, 0,1,2 vs 3,4,5
             playingTeam = turn < TeamSize ? Team1 : Team2;
@@ -53,7 +53,7 @@ public class BattleEngine
         // Results log
         logger.Log(
             "Battle Concluded: "
-            +(Team1.IsAlive() ? $"{Team1.Name} wins" : $"{Team2.Name} wins")
+            +(Team1.IsAlive ? $"{Team1.Name} wins" : $"{Team2.Name} wins")
         );
     }
 }

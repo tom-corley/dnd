@@ -1,5 +1,7 @@
 public abstract class Character
 {
+    public const int MIN_STAT = 1;
+    public const int MAX_STAT = 10;
     public int Health { get; protected set; }
     public int MaxHealth { get; }
     public int Attack { get; protected set; }
