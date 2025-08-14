@@ -1,0 +1,14 @@
+C:\Users\tomco\Documents\dnd_assesment\dnd\dndbattler\bin\Debug\net9.0\dndbattler.exe
+C:\Users\tomco\Documents\dnd_assesment\dnd\dndbattler\bin\Debug\net9.0\dndbattler.deps.json
+C:\Users\tomco\Documents\dnd_assesment\dnd\dndbattler\bin\Debug\net9.0\dndbattler.runtimeconfig.json
+C:\Users\tomco\Documents\dnd_assesment\dnd\dndbattler\bin\Debug\net9.0\dndbattler.dll
+C:\Users\tomco\Documents\dnd_assesment\dnd\dndbattler\bin\Debug\net9.0\dndbattler.pdb
+C:\Users\tomco\Documents\dnd_assesment\dnd\dndbattler\obj\Debug\net9.0\dndbattler.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tomco\Documents\dnd_assesment\dnd\dndbattler\obj\Debug\net9.0\dndbattler.AssemblyInfoInputs.cache
+C:\Users\tomco\Documents\dnd_assesment\dnd\dndbattler\obj\Debug\net9.0\dndbattler.AssemblyInfo.cs
+C:\Users\tomco\Documents\dnd_assesment\dnd\dndbattler\obj\Debug\net9.0\dndbattler.csproj.CoreCompileInputs.cache
+C:\Users\tomco\Documents\dnd_assesment\dnd\dndbattler\obj\Debug\net9.0\dndbattler.dll
+C:\Users\tomco\Documents\dnd_assesment\dnd\dndbattler\obj\Debug\net9.0\refint\dndbattler.dll
+C:\Users\tomco\Documents\dnd_assesment\dnd\dndbattler\obj\Debug\net9.0\dndbattler.pdb
+C:\Users\tomco\Documents\dnd_assesment\dnd\dndbattler\obj\Debug\net9.0\dndbattler.genruntimeconfig.cache
+C:\Users\tomco\Documents\dnd_assesment\dnd\dndbattler\obj\Debug\net9.0\ref\dndbattler.dll
