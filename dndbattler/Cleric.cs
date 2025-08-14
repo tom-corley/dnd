@@ -4,7 +4,7 @@ public class Cleric : Character
 
     public override int AttackCharacter(Character target)
     {
-        target.takeDamage(Attack);
+        target.TakeDamage(Attack);
         Heal(1);
         return target.Health;
     }

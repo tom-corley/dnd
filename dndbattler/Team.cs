@@ -1,3 +1,4 @@
+using System.Text;
 public class Team
 {
     public string Name;
@@ -21,6 +22,17 @@ public class Team
             ans = ans || character.Alive;
         }
         return ans;
+    }
+
+    public override string ToString()
+    {
+        StringBuilder sb = new StringBuilder();
+        sb.Append($"{Name} Status:");
+        foreach (Character member in Members)
+        {
+            sb.Append($"\n\t{member.Name}:  {member.Health}/{member.MaxHealth}");
+        }
+        return sb.ToString();
     }
 
 }

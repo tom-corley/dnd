@@ -20,7 +20,7 @@ public abstract class Character
         return Health;
     }
 
-    public int takeDamage(int dmg)
+    public int TakeDamage(int dmg)
     {
         Health -= dmg;
         return Health;
@@ -28,7 +28,7 @@ public abstract class Character
 
     public virtual int AttackCharacter(Character target)
     {
-        target.takeDamage(Attack);
+        target.TakeDamage(Attack);
         return target.Health;
     }
 }

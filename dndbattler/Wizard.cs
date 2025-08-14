@@ -4,8 +4,8 @@ public class Wizard : Character
 
     public override int AttackCharacter(Character target)
     {
-        target.takeDamage(Attack);
-        takeDamage(1);
+        target.TakeDamage(Attack);
+        TakeDamage(1);
         return target.Health;
     }
 }
