@@ -5,7 +5,7 @@ public class Wizard : Character
     public override int AttackCharacter(Character target)
     {
         target.takeDamage(Attack);
-        Health -= 1;
+        takeDamage(1);
         return target.Health;
     }
 }

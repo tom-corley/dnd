@@ -14,6 +14,12 @@ public abstract class Character
         Attack = attack;
     }
 
+    public int Heal(int amount)
+    {
+        Health += amount;
+        return Health;
+    }
+
     public int takeDamage(int dmg)
     {
         Health -= dmg;
