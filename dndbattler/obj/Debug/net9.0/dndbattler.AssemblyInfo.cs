@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("dndbattler")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9052120cade3f970b7877c376b9514f727ea1271")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a677bd15f988f7b54409372ef052161f75a5911c")]
 [assembly: System.Reflection.AssemblyProductAttribute("dndbattler")]
 [assembly: System.Reflection.AssemblyTitleAttribute("dndbattler")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

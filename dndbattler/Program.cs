@@ -3,14 +3,15 @@
     public static void Main(string[] args)
     {
         // Initialise random number generation and factory 
-        Random rng = new Random(0);
+        Random rng = new Random(5);
         CharacterFactory factory = new CharacterFactory(rng);
 
         // Create Teams
-        System.Console.WriteLine("===CREATING TEAM 1===");
+        System.Console.WriteLine("\n===CREATING TEAM 1===");
         Team team1 = GetTeamFromUser(factory);
-        System.Console.WriteLine("===CREATING TEAM 2===");
+        System.Console.WriteLine("\n===CREATING TEAM 2===");
         Team team2 = GetTeamFromUser(factory);
+        System.Console.WriteLine("\n");
 
         // Launch Game
         BattleEngine game = new BattleEngine(team1, team2);
@@ -21,20 +22,23 @@
 
     public static Team GetTeamFromUser(CharacterFactory factory)
     {
+        // Create Builder
         TeamBuilder builder = new TeamBuilder(factory);
 
         // Name Team
         string teamName = GetStringFromConsole("Please Enter Team Name: ");
         builder.Name(teamName);
 
+        // Create each team member
         for (int i = 0; i < GameConstants.TEAM_SIZE; i++)
         {
-            System.Console.WriteLine($"\nCreating Character {i+1}...");
+            System.Console.WriteLine($"\nCreating Character {i + 1}...");
             CharacterType charType = GetCharacterTypeFromConsole();
             string charName = GetStringFromConsole("Enter Character Name: ");
             builder.AddMember(charType, charName);
         }
 
+        // Build Team
         return builder.Build();
     }
 

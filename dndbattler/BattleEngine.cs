@@ -1,6 +1,3 @@
-using System.Runtime;
-using NUnit.Framework.Internal;
-
 public class BattleEngine
 {
     public Team Team1;
@@ -30,11 +27,12 @@ public class BattleEngine
         Team opposingTeam;
         Character attackingPlayer;
         Character targetedPlayer;
+        int roundNumber = 1;
 
         // Print status of players
-        logger.Log(Team1.ToString()); logger.Log(Team2.ToString());
-
-        logger.Log("Starting Battle\n:");
+        logger.Log("Starting Battle\nHere are the teams:");
+        logger.Log($"{Team1}\n{Team2}");
+        
         // Main game loop
         while (Team1.IsAlive && Team2.IsAlive)
         {
@@ -44,14 +42,28 @@ public class BattleEngine
 
             // Player attacks
             attackingPlayer = playingTeam.Members[turn % TeamSize];
-            targetedPlayer = opposingTeam.Members[rng.Next() % TeamSize];
-            attackingPlayer.AttackCharacter(targetedPlayer);
+            if (!attackingPlayer.Alive)
+            {
+                turn = (turn + 1) % (2 * TeamSize);
+                continue;
+            }
+            do
+            {
+                targetedPlayer = opposingTeam.Members[rng.Next() % TeamSize];
+            }
+            while (!targetedPlayer.Alive);
+            logger.Log($"===ROUND {roundNumber}===");
+            string attack_log;
+            int res = attackingPlayer.AttackCharacter(targetedPlayer, out attack_log);
+            logger.Log(attack_log);
+
 
             // Print status of players
-            logger.Log(Team1.ToString()); logger.Log(Team2.ToString());
+            logger.Log(Team1.ToString()); logger.Log(Team2.ToString()); logger.Log("");
 
-            // Iterate turn    
+            // Iterate turn and round number
             turn = (turn + 1) % (2 * TeamSize);
+            roundNumber++;
         }
 
         // Results log

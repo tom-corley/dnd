@@ -16,21 +16,20 @@ public abstract class Character
         Attack = attack;
     }
 
-    public int Heal(int amount)
-    {
-        Health += amount;
-        return Health;
-    }
-
     public int TakeDamage(int dmg)
     {
-        Health -= dmg;
+        Health = Health - dmg <= 0 ? 0 : Health - dmg;
         return Health;
     }
 
-    public virtual int AttackCharacter(Character target)
+    public virtual int AttackCharacter(Character target, out string log)
     {
         target.TakeDamage(Attack);
+        log = $"{this} attacks {target} dealing {Attack} damage.";
+        if (target.Health == 0)
+        {
+            log += $"\n\t\tThe attack was fatal! {target} has died";
+        }
         return target.Health;
     }
 }

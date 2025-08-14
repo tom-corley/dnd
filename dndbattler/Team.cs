@@ -22,7 +22,7 @@ public class Team
         sb.Append($"{Name} Status:");
         foreach (Character member in Members)
         {
-            sb.Append($"\n\t{member.Name}:  {member.Health}/{member.MaxHealth}");
+            sb.Append($"\t{member}:  {member.Health}/{member.MaxHealth}");
         }
         return sb.ToString();
     }
