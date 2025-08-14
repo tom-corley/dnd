@@ -4,14 +4,14 @@ public class Cleric : Character
 
     public int Heal(int amount)
     {
-        Health += amount;
+        Health = Health + amount <= MaxHealth ? Health + amount : MaxHealth;
         return Health;
     }
 
     public override int AttackCharacter(Character target, out string log)
     {
         int res = base.AttackCharacter(target, out log);
-        TakeDamage(GameConstants.CLERIC_SELF_HEAL);
+        Heal(GameConstants.CLERIC_SELF_HEAL);
         log += $"\n\t\t{this} heals {GameConstants.CLERIC_SELF_HEAL} health points";
         return res;
     }

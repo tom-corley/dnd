@@ -2,7 +2,7 @@ public class TeamBuilder
 {
     private readonly CharacterFactory _factory;
     private List<Character> _members = new List<Character>();
-    private string _teamName = "Unnamed";
+    private string _teamName = "Unnamed Team";
 
     public TeamBuilder(CharacterFactory factory)
     {

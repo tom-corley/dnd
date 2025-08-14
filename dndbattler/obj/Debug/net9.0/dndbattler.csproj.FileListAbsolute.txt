@@ -12,8 +12,4 @@ C:\Users\tomco\Documents\dnd_assesment\dnd\dndbattler\obj\Debug\net9.0\refint\dn
 C:\Users\tomco\Documents\dnd_assesment\dnd\dndbattler\obj\Debug\net9.0\dndbattler.pdb
 C:\Users\tomco\Documents\dnd_assesment\dnd\dndbattler\obj\Debug\net9.0\dndbattler.genruntimeconfig.cache
 C:\Users\tomco\Documents\dnd_assesment\dnd\dndbattler\obj\Debug\net9.0\ref\dndbattler.dll
-C:\Users\tomco\Documents\dnd_assesment\dnd\dndbattler\bin\Debug\net9.0\nunit.framework.dll
-C:\Users\tomco\Documents\dnd_assesment\dnd\dndbattler\bin\Debug\net9.0\nunit.framework.legacy.dll
-C:\Users\tomco\Documents\dnd_assesment\dnd\dndbattler\obj\Debug\net9.0\dndbattler.csproj.AssemblyReference.cache
 C:\Users\tomco\Documents\dnd_assesment\dnd\dndbattler\obj\Debug\net9.0\dndbattler.sourcelink.json
-C:\Users\tomco\Documents\dnd_assesment\dnd\dndbattler\obj\Debug\net9.0\dndbattler.csproj.Up2Date
