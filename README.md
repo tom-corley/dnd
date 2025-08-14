@@ -30,6 +30,7 @@ To download the game onto your local machine:
 To run the game:
 1. Navigate inside the `dndbattler` directory
 2. Run `dotnet run`
+3. Follow the onscreen prompt instructions.
 
 To run tests:
 1. Run `dotnet test` from the root directory of the project
