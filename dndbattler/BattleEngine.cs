@@ -31,6 +31,10 @@ public class BattleEngine
         Character attackingPlayer;
         Character targetedPlayer;
 
+        // Print status of players
+        logger.Log(Team1.ToString()); logger.Log(Team2.ToString());
+
+        logger.Log("Starting Battle\n:");
         // Main game loop
         while (Team1.IsAlive && Team2.IsAlive)
         {

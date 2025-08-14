@@ -7,7 +7,9 @@
         CharacterFactory factory = new CharacterFactory(rng);
 
         // Create Teams
+        System.Console.WriteLine("===CREATING TEAM 1===");
         Team team1 = GetTeamFromUser(factory);
+        System.Console.WriteLine("===CREATING TEAM 2===");
         Team team2 = GetTeamFromUser(factory);
 
         // Launch Game
@@ -27,6 +29,7 @@
 
         for (int i = 0; i < GameConstants.TEAM_SIZE; i++)
         {
+            System.Console.WriteLine($"\nCreating Character {i+1}...");
             CharacterType charType = GetCharacterTypeFromConsole();
             string charName = GetStringFromConsole("Enter Character Name: ");
             builder.AddMember(charType, charName);
