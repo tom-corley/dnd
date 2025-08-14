@@ -21,10 +21,11 @@ To run tests:
 - Magic numbers have been avoided by keeping constants in a class `GameConstants.cs`, they are initialised to the values prescribed in the brief but things like team size and the possible range of health and damage can easily be edited.
 - A Builder pattern is used to construct a Team, this allows characters to be added one at a time, and ensures the team size is correct before allowing building. The builder is passed a character factory to use.
 - A Singleton pattern is used for the Logger, this was mapped almost 1-1 from the exercise last week, as it seemed to transfer well to this task.
+- The battle loop works by looping over each of the characters with modular arithmetic, randomly selecting a target from the opposing team and skipping any characters that are already dead. The `AttackCharacter` function has responsiblility for producing a string detailing what happened, which is then logged by the logger, along with the health of the characters, and a round change notification.
 
 ### Testing
 
-There are five test files (Achieving above 99% Coverage)
+There are five test files (Achieving well above 90% coverage)
 1. CharacterTests.cs
     - Basic Unit tests checking behaviour of each of the classes, such as making sure Clerics do not heal above their maximum health, and making sure Wizards can kill themselves through recoil. This also checks the corresponding Factory class works correctly.
 2. TeamAndTeamBuilder.cs
